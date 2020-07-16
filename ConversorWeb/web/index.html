@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Calculadora de Programador Online</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="autor" content="Alex Bonadio" />
+        <meta name="descricao" content="calculadora de programador" />
+        <meta name="palavras_chave" content="calculadora, programador" />
+        <link rel="stylesheet" href="main.css" type="text/css"/>
+    </head>
+    <body>
+        <div id="div_total">
+            <h2 id="h2_titulo">Calculadora de Programador Online</h2>
+            <form method="post" action="converter.jsp">
+                <p id="p_escolha">Escolha o Sistema Numérico de Entrada para Convertê-lo nos outros Sistemas: </p>  
+                <div id="div_selecao"> 
+                    Binário: <input type="radio" name="cx_radio" value="base2"/>
+                    Ternário: <input type="radio" name="cx_radio" value="base3"/>
+                    Octal: <input type="radio" name="cx_radio" value="base8"/>
+                    Decimal: <input type="radio" name="cx_radio" value="base10" checked=""/>
+                    Hexadecimal: <input type="radio" name="cx_radio" value="base16"/>
+                </div>
+                <p id="p_digite">Digite o número a ser Convertido: <input type="text" size="27" name="cx_input01"/></p>
+                <p id ="p_submit"><input type="submit" value="Converter" ></p>        
+            </form>
+        </div>
+    </body>
+</html>
+
