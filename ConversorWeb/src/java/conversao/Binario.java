@@ -53,7 +53,7 @@ public class Binario extends SistemaNumerico {
             x++;
             y--;
         }
-        setConcatena("Binario: " + getConcatena() + "\n");
+        setConcatena("Binário: " + getConcatena() + "\n");
         System.out.print(getConcatena());
         System.out.println("");
     }

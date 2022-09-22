@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Conversor de Sistemas Númericos Online</title>
+        <title>Conversor de Sistemas Numéricos Online</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="main.css" type="text/css"/>
@@ -67,7 +67,14 @@
                                 out.println("<tr>");
                                 out.print("<td>" + base8.getConcatena() + "</td>");
                                 out.println("</tr>");
-
+                                
+                                // DECIMAL
+                                out.println("<tr>");
+                                out.print("<td> Decimal: ");
+                                out.print(base10.getInput02());
+                                out.print("</td>");
+                                out.println("</tr>");
+                                
                                 // HEXADECIMAL
                                 //    out.println("<br />");
                                 base16.setInput01(Long.valueOf(base10.getInput02()));
@@ -89,39 +96,52 @@
                             } else {
                                 base2.setBase((short) 2);                   // converterá em Decimal
                                 base2.multiplicar();
-                                out.print("Decimal: ");
+                                out.println("<table border='1'>");
+                                out.println("<tr>");
+                                out.print("<td> Decimal: ");
                                 out.print(base2.getInput01());
+                                out.print("</td>");
+                                out.println("</tr>");
 
                                 // TERNARIO
-                                out.println("<br />");
+                                // out.println("<br />");
                                 base3.setInput01(base2.getInput01());
                                 base3.setDivisor((short) 3);                 // converterá em Ternário
                                 base3.dividir();
                                 base3.imprimir();
-                                out.print(base3.getConcatena());
+                                out.println("<tr>");
+                                out.print("<td>" + base3.getConcatena()+ "</td>");
+                                out.println("</tr>");
 
                                 // OCTAL
-                                out.println("<br />");
+                                // out.println("<br />");
                                 base8.setInput01(base2.getInput01());
                                 base8.setDivisor((short) 8);                  // converterá em Octal
                                 base8.dividir();
                                 base8.imprimir();
-                                out.print(base8.getConcatena());
-
+                                out.println("<tr>");
+                                out.print("<td>" + base8.getConcatena() + "</td>");
+                                out.println("</tr>");
+                                
                                 // HEXADECIMAL
-                                out.println("<br />");
+                                // out.println("<br />");
                                 base16.setInput01(base2.getInput01());
                                 base16.setDivisor((short) 16);                   // converterá em HEXADECIMAL
                                 base16.dividir();
                                 base16.imprimir();
-                                out.print(base16.getConcatena());
+                                out.println("<tr>");
+                                out.print("<td>" + base16.getConcatena()+ "</td>");
+                                out.println("</tr>");
 
                                 // Binário
-                                out.println("<br />");
+                                // out.println("<br />");
                                 base2.setDivisor((short) 2);              // converterá em binário
                                 base2.dividir();
                                 base2.imprimir();
-                                out.print(base2.getConcatena());
+                                out.println("<tr>");
+                                out.print("<td>" + base2.getConcatena()+ "</td>");
+                                out.println("</tr>");
+                                out.println("</table>");
                             }
                         } else if (sistema.equals("base3")) {
                             // Ternário
@@ -133,32 +153,43 @@
                             } else {
                                 base3.setBase((short) 3);              // converterá em Decimal
                                 base3.multiplicar();
-                                out.print("Decimal: ");
+                                out.println("<table border='1'>");
+                                out.println("<tr>");
+                                out.print("<td> Decimal: ");
                                 out.print(base3.getInput01());
+                                out.print("</td>");
+                                out.println("</tr>");
 
                                 // Binário
-                                out.println("<br />");
+                               // out.println("<br />");
                                 base2.setInput01(base3.getInput01());
                                 base2.setDivisor((short) 2);              // converterá em binário
                                 base2.dividir();
                                 base2.imprimir();
-                                out.print(base2.getConcatena());
+                                out.println("<tr>");
+                                out.print("<td>" + base2.getConcatena()+ "</td>");
+                                out.println("</tr>");
 
                                 // OCTAL
-                                out.println("<br />");
+                               // out.println("<br />");
                                 base8.setInput01(base3.getInput01());
                                 base8.setDivisor((short) 8);                   // converterá em OCTAL
                                 base8.dividir();
                                 base8.imprimir();
-                                out.print(base8.getConcatena());
+                                out.println("<tr>");
+                                out.print("<td>" + base8.getConcatena() + "</td>");
+                                out.println("</tr>");
 
                                 // HEXADECIMAL
-                                out.println("<br />");
+                               // out.println("<br />");
                                 base16.setInput01(base3.getInput01());
                                 base16.setDivisor((short) 16);                   // converterá em HEXADECIMAL
                                 base16.dividir();
                                 base16.imprimir();
-                                out.print(base16.getConcatena());
+                                out.println("<tr>");
+                                out.print("<td>" + base16.getConcatena()+ "</td>");
+                                out.println("</tr>");
+                                out.println("</table>");
                             }
                         } else if (sistema.equals("base8")) {
                             // OCTAL
@@ -170,32 +201,44 @@
                             } else {
                                 base8.setBase((short) 8);               // converterá em Decimal
                                 base8.multiplicar();
-                                out.print("Decimal: ");
+                                out.println("<table border='1'>");
+                                out.println("<tr>");
+                                out.print("<td> Decimal: ");
                                 out.print(base8.getInput01());
-
+                                out.print("</td>");
+                                out.println("</tr>");
                                 // Binário
-                                out.println("<br />");
+                               // out.println("<br />");
                                 base2.setInput01(base8.getInput01());
                                 base2.setDivisor((short) 2);               // converterá em binário
                                 base2.dividir();
                                 base2.imprimir();
-                                out.print(base2.getConcatena());
+                                out.println("<tr>");
+                                out.print("<td>" + base2.getConcatena()+ "</td>");
+                                out.println("</tr>");
+
 
                                 // TERNARIO
-                                out.println("<br />");
+                                // out.println("<br />");
                                 base3.setInput01(base8.getInput01());
                                 base3.setDivisor((short) 3);                 // converterá em Ternário
                                 base3.dividir();
                                 base3.imprimir();
-                                out.print(base3.getConcatena());
+                                out.println("<tr>");
+                                out.print("<td>" + base3.getConcatena()+ "</td>");
+                                out.println("</tr>");
+
 
                                 // HEXADECIMAL
-                                out.println("<br />");
+                               // out.println("<br />");
                                 base16.setInput01(base8.getInput01());
                                 base16.setDivisor((short) 16);                  // converterá em HEXADECIMAL
                                 base16.dividir();
                                 base16.imprimir();
-                                out.print(base16.getConcatena());
+                                out.println("<tr>");
+                                out.print("<td>" + base16.getConcatena()+ "</td>");
+                                out.println("</tr>");
+                                out.println("</table>");
                             }
                         } else {
                             // Hexadecimal
@@ -207,32 +250,43 @@
                             } else {
                                 base16.setBase((short) 16);              // converterá em Decimal
                                 base16.multiplicar();
-                                out.print("Decimal: ");
+                                out.println("<table border='1'>");
+                                out.println("<tr>");
+                                out.print("<td> Decimal: ");
                                 out.print(base16.getInput01());
+                                out.print("</td>");
+                                out.println("</tr>");
 
                                 // Binário
-                                out.println("<br />");
+                               // out.println("<br />");
                                 base2.setInput01(base16.getInput01());
                                 base2.setDivisor((short) 2);               // converterá em binário
                                 base2.dividir();
                                 base2.imprimir();
-                                out.print(base2.getConcatena());
+                                out.println("<tr>");
+                                out.print("<td>" + base2.getConcatena()+ "</td>");
+                                out.println("</tr>");
 
                                 // TERNARIO
-                                out.println("<br />");
+                               // out.println("<br />");
                                 base3.setInput01(base16.getInput01());
                                 base3.setDivisor((short) 3);                   // converterá em Ternário
                                 base3.dividir();
                                 base3.imprimir();
-                                out.print(base3.getConcatena());
+                                out.println("<tr>");
+                                out.print("<td>" + base3.getConcatena()+ "</td>");
+                                out.println("</tr>");
 
                                 // OCTAL
-                                out.println("<br />");
+                               // out.println("<br />");
                                 base8.setInput01(base16.getInput01());
                                 base8.setDivisor((short) 8);                   // converterá em OCTAL
                                 base8.dividir();
                                 base8.imprimir();
-                                out.print(base8.getConcatena());
+                                out.println("<tr>");
+                                out.print("<td>" + base8.getConcatena() + "</td>");
+                                out.println("</tr>");
+                                out.println("</table>");
                             }
                         }
                     }
