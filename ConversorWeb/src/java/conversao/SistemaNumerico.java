@@ -20,7 +20,7 @@ public abstract class SistemaNumerico {
     public abstract void capturarEntrada(); 
 
     public void dividir() {
-        // Método faz a divisão, armazena os resto de cada divisão e o quociente da última divisão no vetor resto[]
+        // Método faz a divisão, armazena o resto de cada divisão e o quociente da última divisão no vetor resto[]
         if (divisor > input01) {
             resto.add(i, input01);
         } else {
